@@ -17,6 +17,8 @@
       border: 1px solid #dee2e6;
       border-radius: 1rem;
       margin-bottom: 1rem;
+      padding: 10px;
+      min-height: 400px;
     }
   </style>
 </head>
@@ -32,6 +34,7 @@
     <!-- Page Content -->
     <div class="row">
       <div class="col-md-2">
+        <!-- Region Dropdown -->
         <div class="card mb-4">
           <div class="card-header">
             <h5>Region:</h5>
@@ -40,24 +43,24 @@
             <select id="selRegion" class="form-select" onchange="optionChanged(this.value)"></select>
           </div>
         </div>
-        <div class="card">
+        <!-- Demographic Dropdowns -->
+        <div class="card mb-4">
           <div class="card-header">
-            <h5>Demographic</h5>
+            <h5>Demographic:</h5>
           </div>
-          <div id="sample-metadata" class="card-body"></div>
+          <div class="card-body">
+            <select id="selDemographic" class="form-select" onchange="optionChanged(this.value)"></select>
+          </div>
         </div>
       </div>
       <!-- Charts Visualization-->
-      <div class="col-md-5">
+      <div class="col-md-9">
         <div id="chart" class="chart-container"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge" class="chart-container"></div>
-      </div>
     </div>
-    <div class="row mt-4">
-      <div class="col-md-6">
-        <div id="bar" class="chart-container"></div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div id="bar" class="chart-container"></div>
       </div>
       <div class="col-md-6">
         <div id="bubble" class="chart-container"></div>
