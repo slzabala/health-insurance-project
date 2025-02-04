@@ -200,7 +200,7 @@ function buildCharts() {
     .attr("text-anchor", "middle")
     .style("font-size", "18px")
     .style("font-weight", "bold")
-    .text(`Demographic vs. Total Claims in ${selectedRegion}`);
+    .text(`Demographic vs. Total Claim Charges in ${selectedRegion}`);
 
   // Define x and y scales
   const xBubble = d3.scaleBand()
