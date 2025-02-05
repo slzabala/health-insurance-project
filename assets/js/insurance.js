@@ -88,7 +88,7 @@ function buildCharts() {
     d => d.claimType
   );
 
-  // Convert the map to an array and sort by charges
+  // Sort by charges for total claim charges by region
   let barData = Array.from(claimTypes, ([type, charges]) => ({ type, charges }))
     .sort((a, b) => d3.descending(a.charges, b.charges))
     .slice(0, 10); 
